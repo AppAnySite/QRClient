@@ -1,0 +1,2 @@
+# QRClient
+QR Code Manager
