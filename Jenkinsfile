@@ -65,7 +65,18 @@ pipeline {
                 ) 
             }
         }
-        
+      
+        stage("Deploy Maigha Server") {
+            steps{
+                script{
+                if(params.DEPLOY_FLAG){ 
+                    echo "Triggering Spinnaker Pipeline for Deployment "
+                     kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
+                    echo "Please Check Spinnaker Pipeline for Deployment Progress"
+                    }
+                }
+            }
+        } 
         
         // stage("Deploy Maigha Server") {
         //     steps{
