@@ -51,8 +51,6 @@ pipeline {
                         if(params.BUILD_FLAG){
                         echo "Building docker image for Maigha Backend"
                         sh """
-                            echo `pwd`
-                            cd client
                             docker version
                             docker build --no-cache --tag ${OVR_REGISTRY}/${REGISTRY_REPO}:${DOCKER_IMAGE_TAG} .
                             echo "Executing Docker Commands"
