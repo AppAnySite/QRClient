@@ -2,7 +2,6 @@ Version: apps/v1
 kind: Deployment
 metadata:
   name: react-client-deployment
-  namespace: m-platform
   labels:
     app: react-client
 spec:
