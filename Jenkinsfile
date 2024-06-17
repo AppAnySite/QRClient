@@ -17,8 +17,9 @@ pipeline {
                         {   
               
                     // if (params.ENV_TYPE == 'production') {
-                        OVR_REGISTRY = "9h4f263p.c1.va1.container-registry.ovh.us"
-                        REGISTRY_REPO = "maigha/qrclient"
+                        // OVR_REGISTRY = "9h4f263p.c1.va1.container-registry.ovh.us"
+                        OVR_REGISTRY = "hub.docker.io"
+                        REGISTRY_REPO = "polurisuresh/docker-jenkins"
                         //RM_SLACK_CHANNEL = "ft-svc-deployments"
                         //RM_SLACK_TOKEN = "08db7e7a-e27d-4760-8295-06fb022bfe05"
                         DOCKER_IMAGE_TAG = "${BUILD_DATE}-${BUILD_NUMBER}"
